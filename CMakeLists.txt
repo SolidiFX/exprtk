@@ -4,6 +4,11 @@ project(exprtk VERSION 1.0.0 LANGUAGES CXX)
 
 include_directories("./include")
 
+# universal numbers library
+find_package(UNIVERSAL REQUIRED)
+include_directories(${UNIVERSAL_INCLUDE_DIRS})
+message(STATUS "UNIVERSAL INCLUDE DIR" ${UNIVERSAL_INCLUDE_DIRS})
+
 # macro to read all the cpp files in a directory
 # and create a test target for that cpp file
 macro (compile_all testing prefix)

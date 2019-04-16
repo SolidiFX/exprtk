@@ -107,7 +107,7 @@ void run_exprtk_benchmark(T& x, T& y,
    timer.stop();
 
    if (T(0) != total)
-      printf("[exprtk] Total Time:%12.8f  Rate:%14.3fevals/sec Expression: %s\n",
+      printf("[exprtk] Total Time:%12.8f  Rate:%14.3f evals/sec Expression: %s\n",
              timer.time(),
              count / timer.time(),
              expr_string.c_str());
@@ -138,7 +138,7 @@ void run_native_benchmark(T& x, T& y, NativeFunction f, const std::string& expr_
    timer.stop();
 
    if (T(0) != total)
-      printf("[native] Total Time:%12.8f  Rate:%14.3fevals/sec Expression: %s\n",
+      printf("[native] Total Time:%12.8f  Rate:%14.3f evals/sec Expression: %s\n",
              timer.time(),
              count / timer.time(),
              expr_string.c_str());
@@ -174,7 +174,7 @@ bool run_parse_benchmark(exprtk::symbol_table<T>& symbol_table)
 
       timer.stop();
 
-      printf("[parse] Total Time:%12.8f  Rate:%14.3fparse/sec Expression: %s\n",
+      printf("[parse] Total Time:%12.8f  Rate:%14.3f parse/sec Expression: %s\n",
              timer.time(),
              rounds / timer.time(),
              global_expression_list[i].c_str());
