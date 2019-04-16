@@ -9,6 +9,18 @@ find_package(UNIVERSAL REQUIRED)
 include_directories(${UNIVERSAL_INCLUDE_DIRS})
 message(STATUS "UNIVERSAL INCLUDE DIR" ${UNIVERSAL_INCLUDE_DIRS})
 
+set(EXTRA_FLAGS             "")
+set(EXTRA_FLAGS_DEBUG       "")
+set(EXTRA_FLAGS_RELEASE     "")
+
+set(CMAKE_CXX_FLAGS         "${CMAKE_CXX_FLAGS}         ${EXTRA_FLAGS}")
+set(CMAKE_CXX_FLAGS_DEBUG   "${CMAKE_CXX_FLAGS_DEBUG}   ${EXTRA_FLAGS_DEBUG}")
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${EXTRA_FLAGS_RELEASE}")
+
+if (MSVC)
+	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /bigobj")
+endif (MSVC)
+
 # macro to read all the cpp files in a directory
 # and create a test target for that cpp file
 macro (compile_all testing prefix)
