@@ -3,7 +3,7 @@
  *         C++ Mathematical Expression Toolkit Library        *
  *                                                            *
  * Simple Example 13                                          *
- * Author: Arash Partow (1999-2020)                           *
+ * Author: Arash Partow (1999-2019)                           *
  * URL: http://www.partow.net/programming/exprtk/index.html   *
  *                                                            *
  * Copyright notice:                                          *
@@ -31,7 +31,7 @@ void savitzky_golay_filter()
    typedef exprtk::expression<T>     expression_t;
    typedef exprtk::parser<T>             parser_t;
 
-   const std::string sgfilter_program =
+   std::string sgfilter_program =
                   " var weight[9] :=                                          "
                   "       {                                                   "
                   "         -21, 14,  39,                                     "
