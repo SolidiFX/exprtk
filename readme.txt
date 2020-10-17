@@ -4443,6 +4443,8 @@ to stdout.
 
 --- snip ---
 #include <cstdio>
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fstillwater-sc%2Fexprtk.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fstillwater-sc%2Fexprtk?ref=badge_shield)
+
 #include <string>
 
 #include "exprtk.hpp"
@@ -4861,3 +4863,7 @@ ExprTk and their structural representations.
 |                      +--<--- [,] <-----+                    |
 |                                                             |
 +-------------------------------------------------------------+
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fstillwater-sc%2Fexprtk.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fstillwater-sc%2Fexprtk?ref=badge_large)
